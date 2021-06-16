@@ -2,10 +2,10 @@ import React from 'react'
 import Button from 'elements/Button'
 import BrandIcon from 'parts/IconText'
 
-export default function Header(prop) {
+export default function Header(props) {
 
     const getNavLinkClass  = path => {
-        return props.location.pathname === path ? active : "";
+        return props.location.pathname === path ? "active" : "";
     }
 
     return (
@@ -13,7 +13,6 @@ export default function Header(prop) {
             <div className="container">
                 <nav className="navbar navbar-expand-lg nasvbar-light">
                     <BrandIcon />
-                </nav>
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav ml-auto">
                         <li className={`nav-item${getNavLinkClass("/")}` }>
@@ -30,6 +29,7 @@ export default function Header(prop) {
                         </li>
                     </ul>
                 </div>
+                </nav>
             </div>
         </header>
     )
